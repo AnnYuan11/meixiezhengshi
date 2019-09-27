@@ -1,0 +1,364 @@
+/**index.wxss**/
+swiper {
+  display:block;
+  height:400rpx;
+}
+.img{
+  width: 700rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20rpx;
+}
+/* 指示点样式 */
+.swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal{
+     margin-bottom: 15rpx;
+}
+.swiper-box .wx-swiper-dot{
+    width:10rpx;
+    display: inline-flex;
+    height: 10rpx;
+    background: #fff;
+    justify-content:space-between;
+}
+.swiper-box .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1; 
+    background: rgba(255,255,255,0.8);
+    border-radius: 8rpx
+}
+.swiper-box .wx-swiper-dot-active::before{
+    /* width:40rpx;
+    display: inline-flex;
+    height: 10rpx; */
+    background: #55DD85;
+}
+/* 第二部分 */
+.box_icon{
+  width: 100%;
+  padding: 50rpx 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.icon_list{
+  width: 25%;
+  text-align: center;
+  float: left;
+}
+.icon_list image{
+  width: 100rpx;
+  /* height: 118rpx; */
+}
+.icon_list text{
+  font-size:26rpx;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  display: block;
+  line-height: 10rpx;
+  margin-top:20rpx;
+
+}
+
+  /* 精彩评论 */
+.title_bg{
+  width: 100%;
+  height: 88rpx;
+  padding: 0 30rpx;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  /* background: -webkit-linear-gradient(0deg, #46da7a, #41eac0);  */
+  overflow: hidden;
+}
+.title_bg .line{
+  width:9rpx;
+  height:33rpx;
+  background:#86cab0;
+  float: left;
+  margin-top: 27rpx;
+}
+.title_bg text{
+  font-size:34rpx;
+  font-weight:500;
+  color:#86cab0;
+  /* display: block; */
+  margin-left: 20rpx;
+  vertical-align: top;
+ /* margin-top:-6rpx; */
+
+}
+/* 评论 */
+.comment_box{
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.comment_list{
+  width:100%;
+  padding: 40rpx 0rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E6E6E6;
+  overflow: hidden;
+}
+.comment_list .left image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+.comment_list .left{
+  width: 30%;
+  float: left;
+}
+.comment_list .right{
+  width: 70%;
+  float: right;
+  overflow: hidden;
+}
+.comment_list .right .top{
+  overflow: hidden;
+}
+.comment_list .right .name{
+  font-size:28rpx;
+  font-weight:500;
+  color:#86cab0;
+  float: left;
+
+}
+.comment_list .right .date{
+  font-size:22rpx;
+  font-weight:normal;
+  color:rgba(184,184,184,1);
+  float: right;
+}
+.pj{
+  font-size:26rpx;
+  font-weight:400;
+  color:rgba(111,111,111,1);
+  line-height: 36rpx;
+  display: inline-block;
+  margin-top: 18rpx;
+}
+.comment_list .right .bottom text{
+  display: inline-block;
+  font-size:20rpx;
+  color:rgba(11,149,255,1);
+  background:rgba(239,241,254,1);
+  border-radius:5rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  padding: 0 20rpx;
+  margin-right: 25rpx;
+}
+.comment_list .right .bottom text:last-child{
+  margin: 0;
+}
+.title_bg  .more{
+  font-size: 28rpx;
+  color: #666;
+  float: right;
+  /* margin-top: -1rpx; */
+}
+.jcpl{
+  float: left;
+}
+.replay{
+  font-size: 24rpx;
+  color: #46da7a;
+  display: block;
+  margin-top: 20rpx;
+}
+/* 弹窗 */
+.zffs_box{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  top:0;
+  flex-direction:column;
+  background: rgba(153,153,153,0.5);
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+  z-index: 99999999999;
+}
+.zffs{
+  width: 70%;
+  height: 350rpx;
+  background: #fff;
+  margin: 0 auto;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  text-align: center;
+  /* display: none; */
+}
+.zffs .title{
+  display: block;
+  font-size: 32rpx;
+  font-weight: 600;
+  color:rgb(23, 243, 103);
+  margin: 0 auto;
+  line-height: 300rpx;
+  /* margin-top: 20rpx; */
+}
+.btns{
+  position: absolute;
+  width: 50%;
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background:  #47DA7C;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  border-bottom-right-radius: 20rpx;
+}
+.zhkk{
+  left: 0;
+  background:  rgb(23, 243, 103);
+  border-bottom-right-radius: 0rpx;
+  border-bottom-left-radius: 20rpx;
+}
+.tips{
+  font-size: 26rpx;
+  color:#999;
+  display:block;
+  width:90%;
+  margin:0 auto;
+}
+.guan{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+
+.zffs_box1{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  top:0;
+  flex-direction:column;
+  background: rgba(153,153,153,0.5);
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+  z-index: 99999999999;
+}
+.zffs_box1 .zffs{
+  width: 80%;
+  height: 550rpx;
+  background: #fff;
+  margin: 0 auto;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+  /* border-radius: 20rpx; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  text-align: center;
+  /* display: none; */
+}
+
+.zffs_box1 .zffs .title{
+  display: block;
+  font-size: 32rpx;
+  font-weight: 600;
+  color:#000;
+  margin: 0 auto;
+  line-height:1rpx;
+  margin-top: 40rpx;
+}
+.zffs_box1 .jg{
+  font-size: 70rpx;
+  /* font-weight: 600; */
+  color:#47DA7C;
+  margin-right: 30rpx;
+  /* margin-top: 20rpx; */
+}
+.zffs_box1 .yuan{
+  font-size: 38rpx;
+  color: #000;
+  margin-top: 50rpx;
+  display:inline-block;
+
+}
+.zffs_box1 .selec{
+  font-size: 30rpx;
+  color: #a0a0a0;
+  display: block;
+  margin-top: 20rpx;
+  text-align: left;
+}
+.zffs_box1 .btns{
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background:  #47DA7C;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  border-bottom-right-radius:20rpx;
+  border-bottom-left-radius:20rpx;
+}
+.zffs_box1 .zhkk{
+  left: 0;
+  background:  rgb(23, 243, 103);
+  /* border-bottom-right-radius: 0rpx;
+  border-bottom-left-radius: 20rpx; */
+}
+.zffs_box1 .tips{
+  font-size: 26rpx;
+  color:#999;
+  display:block;
+  width:90%;
+  margin:0 auto;
+}
+.zffs_box1 .guan{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+.zffs_box1 .radio{
+  display: block;
+  margin-top: 20rpx;
+  font-size:24rpx;
+  margin-left: -30%;
+}
+
+.zffs_box1 radio {
+  transform:scale(0.8);
+}
+.zffs_box1 .radio-group{
+  position: relative;
+  left: 0;
+}
+.zffs_box1 .yue{
+  font-size: 24rpx;
+  position: absolute;
+  left: 53%;
+  top:5%;
+}
+
+.imgArr{
+  margin-top: 20rpx;
+}
+.imgn{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right:10rpx;
+}
+.imgn:nth-child(3n){
+  margin-right: 0;
+}
+

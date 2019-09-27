@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<official-account></official-account>
+<swiper class="swiper-box" indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+        <swiper-item>
+        <navigator url='../details/banner/banner?id={{item.id}}'>
+            <image src="{{imgUrl+item.photo}}" class="slide-ima5ge img"/>
+        </navigator>
+        </swiper-item>
+    </block>
+</swiper>
+<!-- icon选项部分 -->
+<view class='box_icon'>
+<navigator url="/pages/details/wyxx/wyxx?type1=1" hover-class="none">
+    <view class='icon_list'>
+      <image src='../../image/icon/crxg.png'  mode='widthFix'></image>   
+      <text>存入鞋柜</text>   
+    </view>
+</navigator>
+<navigator url="/pages/details/wyxx/wyxx?type1=2" hover-class="none">
+    <view class='icon_list'>
+      <image src='../../image/icon/smqx.png'  mode='widthFix'></image>   
+      <text>上门取鞋</text>   
+    </view>
+</navigator>
+  <navigator url="/pages/details/tcxx/tcxx" hover-class="none">
+      <view class='icon_list'>
+        <image src='../../image/icon/tcxx.png' mode='widthFix'></image>   
+        <text>套餐洗鞋</text>   
+      </view>
+</navigator>
+<navigator url="/pages/details/bzzx_details/bzzx_details?id=4028b88165f24d1d0165f25134b40000" hover-class="none">
+    <view class='icon_list'>
+      <image src='../../image/icon/jgsm.png'  mode='widthFix'></image>    
+      <text>价格说明</text>   
+    </view>
+</navigator>
+
+</view>
+<!-- 精彩评论 -->
+<view class='title_bg'>
+  <view class='line'></view>
+  <text class='jcpl'>客户评论</text>
+  <text class='more' bindtap='more'>查看更多</text>
+</view>
+<!-- 评论 -->
+<view class='comment_box'>
+  <view class='comment_list' wx:for="{{pinglun}}" wx:if="{{index<10}}">
+    <view class='left'>
+      <image src='../../image/details/x.jpg' wx:if="{{item.userInfo.photo==undefined||item.userInfo.photo==''}}"></image>
+      <image src='{{imgUrl+item.userInfo.photo}}'wx:else></image>
+    </view>
+    <view class='right'>
+      <view class='top'>
+         <text class='name'>{{item.userInfo.nickName}}</text>
+        <text class='date'>{{item.createTime}}</text>
+      </view>
+      <text class='pj'>{{item.content}}</text>
+      <view class='imgArr'>
+      <block  wx:for="{{item.img}}" wx:for-item="img">
+        <image class="imgn" src='{{imgUrl+img}}' data-src="{{imgUrl+img}}" data-list='{{item.img}}' data-index='{{index}}' bindtap='previewImg'></image>          
+      </block>
+    </view>
+      
+      <!-- <text class='replay' wx:if="{{item.replyContent!=''}}">客服：{{item.replyContent}}</text> -->
+    </view>
+  </view>
+</view>
+

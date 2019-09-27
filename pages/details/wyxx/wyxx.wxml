@@ -1,0 +1,91 @@
+<!--pages/details/wyxx/wyxx.wxml-->
+<view class='list box_fjzd' wx:if="{{type1==1}}">
+   <image src='../../../image/details/address.png' style='width:44rpx;height:44rpx;vertical-align:middle'></image>
+   <text class='left' bindtap='fjzd'>附近站点</text>
+   <text class='right'>{{fjzd}}</text>
+</view>
+<image src='{{imgUrl+img_bg}}' style='width:750rpx;height:300rpx;'  wx:if="{{type1==1}}"></image>
+<image src='../../../image/index/bg.png' style='width:750rpx;height:169rpx;'  wx:if="{{type1==2}}"></image>
+<!-- <image src='../../../image/details/icons.png' mode='widthFix' style='width:740rpx;'></image> -->
+<!-- 填写信息 -->
+<view class='message'>
+  <image src='../../../image/details/line.png' mode='widthFix' style='width:10rpx;'></image>
+  <text>填写信息</text>
+</view>
+<!-- 内容 -->
+<view class='content'>
+  <view class='list'>
+    <view class='left'>鞋子数量</view>
+    <view class='right'>
+      <image  src='../../../image/details/jian.png'mode="widthFix"style='width:38rpx' bindtap='jian'></image>   
+      <text>{{num}}</text>
+       <image  src='../../../image/details/jia.png'mode="widthFix"style='width:38rpx' bindtap='jia'></image>   
+    </view>
+  </view>
+  <navigator  wx:if="{{type1==2}}" url='../selectdz/selectdz?num={{num}}&adaddress={{adaddress}}&zdid={{zdid}}&type1={{type1}}&userCouponInfoId={{userCouponInfoId}}&money={{money}}&wlf={{wlf}}' hover-class="none">
+    <view class='list'>
+      <view class='left'>地址管理</view>
+      <view class='right'>
+        <text class='jt'>{{dizhi}}</text>
+      </view>
+    </view>
+  </navigator>
+  <navigator wx:if="{{type1==1}}" url='../fjzd/fjzd?num={{num}}&dizhi={{dizhi}}&dzid={{dzid}}&type1={{type1}}&userCouponInfoId={{userCouponInfoId}}&money={{money}}' hover-class="none">
+    <view class='list'>
+      <view class='left'>鞋柜地址</view>
+      <view class='right'>
+        <text class='jt'>{{adaddress}}</text>
+      </view>
+    </view>
+  </navigator>
+  <view class='list' wx:if="{{type1==2}}">
+      <view class='left'>物流费</view>
+      <view class='right'>
+        <text class='jt' style='color:#86cab0'>{{wlf}}元</text>
+      </view>
+    </view>
+  <!-- <navigator url='../wdyhq/wdyhq?num={{num}}&dizhi={{dizhi}}&dzid={{dzid}}&type1={{type1}}&adaddress={{adaddress}}&zdid={{zdid}}'>
+  <view class='list'>
+    <view class='left'>结算时红包抵扣</view>
+      <view class='right'>
+        <text class='jt'>{{money}}</text>
+      </view>
+  </view>
+  </navigator> -->
+  <view class='lists'>
+    <text class='beizhu'>添加备注</text>
+    <textarea wx:if="{{show2}}" bindblur="bindTextAreaBlur"  placeholder='请标注您鞋子护理的具体要求（字数不超过50字）'placeholder-style="color:#999;font-size:24rpx;" maxlength='50'></textarea>
+    <text wx:if="{{show1}}" style='font-size:24rpx;color:#999;'>{{remark}}</text>
+  </view>
+</view>
+<view class='fc' bindtap='wyxx'>提交</view>
+<!-- 浮层 -->
+<view class='cover' wx:if="{{isShow}}" >
+  <view class='yuyue'>
+    <image src='../../../image/details/yuyue.png' class='img'></image>
+  </view>
+  <view class='close' bindtap='hideCovew'>
+    <image src='../../../image/details/close2.png' class='img_close'></image>
+  </view>
+</view>
+
+<view class='cover' wx:if="{{isShow2}}">
+  <view class='yuyue'>
+    <image src='../../../image/details/yuyue4.png' class='img'></image>
+  </view>
+  <view class='close' bindtap='hideCovew2'>
+    <image src='../../../image/details/close2.png' class='img_close'></image>
+  </view>
+</view>
+
+
+<!-- 弹窗 -->
+<view class='t_flow' wx:if="{{type1==1}}">
+  <view class='t_box'>
+  
+  <view class='t_img' bindtap='swidthTo'>
+    <image src='../../../image/details/tt.png' mode='widthFix'></image>
+  </view>
+ 
+  </view>
+</view>

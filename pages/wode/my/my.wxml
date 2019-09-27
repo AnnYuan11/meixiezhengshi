@@ -1,0 +1,115 @@
+<!--pages/wode/my/my.wxml-->
+<!-- 登录 -->
+<navigator url="../../login/login" hover-class="none" wx:if='{{isshow==true}}'>
+  <view class='bg_box'>
+    <image src='../../../image/my/bg.png' mode='widthFix'> </image>
+    <view class='zc'>
+      <text class='dl'>登陆/注册</text>
+      <text class='content'>登陆后可查看相关内容</text>
+    </view>
+  </view>
+</navigator>
+
+<view class='bg_box'wx:if='{{isshow==false}}'>
+    <image src='../../../image/my/bg.png' mode='widthFix'> </image>
+    <view class='zc'>
+    <view class='head'>
+       <open-data type="userAvatarUrl" style="border-radius:50%;overflow:hidden;display:block;height:130rpx;"></open-data>
+    </view>
+      <view class='xinxi'>
+        <text class='number'>{{phone}}</text>
+      </view>
+    </view>
+    <navigator url="../../details/chongzhi/chongzhi" hover-class="none">
+      <view class='chongzhi'>充值</view>
+    </navigator>
+    <view class='exit' bindtap='exit'>退出登录</view>
+    
+</view>
+
+<!-- 列表选项 -->
+<view class='list'>
+  <navigator url="../../details/wdcf/wdcf" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/wdcf.png' mode='widthFix' style='width:36rpx;'></image>
+      <text>我的余额</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator>
+  <view class='lis' bindtap='jump'>
+    <image src='../../../image/my/wddd.png' mode='widthFix' style='width:32rpx;'></image>
+    <text>我的订单</text>
+    <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+  </view>
+    <navigator url="../../details/tuijian/tuijian" hover-class="none">
+      <view class='lis'>
+        <image src='../../../image/my/tj.png' mode='widthFix' style='width:38rpx;'></image>
+        <text>推荐有礼</text>
+        <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+      </view>
+    </navigator>
+  <navigator url="../../details/wdyhq2/wdyhq2" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/yhq.png' mode='widthFix' style='width:36rpx;'></image>
+      <text>我的优惠券</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator>
+  <navigator url="../../details/wdjf/wdjf" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/wdjf.png' mode='widthFix' style='width:32rpx;'></image>
+      <text>我的积分</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator>
+  <view class='line'></view>
+  <navigator url="../../details/dzgl/dzgl" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/dzgl.png' mode='widthFix' style='width:32rpx;'></image>
+      <text>地址管理</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator>
+  <navigator url="../../details/wyjx/wyjx" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/jx.png' mode='widthFix' style='width:38rpx;'></image>
+      <text>捐鞋</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator>
+  <navigator url="../../details/bzzx/bzzx" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/bzzx.png' mode='widthFix' style='width:38rpx;'></image>
+      <text>帮助中心</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator>
+  <!-- <navigator url="../../details/jbdh/jbdh" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/jb.png' mode='widthFix' style='width:42rpx;'></image>
+      <text>计步兑换</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator> -->
+  <navigator url="../../details/fapiao/fapiao" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/fpgl.png' mode='widthFix' style='width:36rpx;'></image>
+      <text>发票管理</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator>
+  <navigator url="../../details/wdqy/wdqy" hover-class="none">
+    <view class='lis'>
+      <image src='../../../image/my/wdqy.png' mode='widthFix' style='width:38rpx;'></image>
+      <text>我的权益</text>
+      <image src='../../../image/my/jt.png' mode='widthFix' style='width:12rpx;' class='jt'></image>
+    </view>
+  </navigator>
+
+  
+    <view class='lis' bindtap='phone'>
+      <image src='../../../image/my/fk.png' mode='widthFix' style='width:40rpx;'></image>
+      <text>客服电话</text>
+    </view>
+ 
+</view>

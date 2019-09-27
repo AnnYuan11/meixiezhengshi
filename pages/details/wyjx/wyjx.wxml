@@ -1,0 +1,20 @@
+<!--pages/details/wyjx/wyjx.wxml-->
+<view class='bg'>
+  <view class='jx'>
+      <image src='../../../image/details/jx.png' mode='widthFix' style='width:558rpx;'></image>
+      <view class='xie_num'>
+        <image  src='../../../image/details/jian.png'mode="widthFix"style='width:38rpx' bindtap='jian'></image> 
+        <text>{{num}}</text>
+        <image  src='../../../image/details/jia.png'mode="widthFix"style='width:38rpx' bindtap='jia'></image>  
+      </view>
+      <view class='juanzeng' bindtap='juanzneg'>
+        去捐赠
+      </view>
+  </view>
+  <view class='select'>
+   <image wx:if="{{selected}}" data-index="{{index}}" class="my-check" src="../../../image/details/YY.png" bindtap="selectList"></image>
+    <image wx:else  class="my-check" data-index="{{index}}" src="../../../image/details/noY.png"  bindtap="selectList" ></image>
+    <navigator url='../jzxy/jzxy' hover-class='none'><text>我同意《捐赠协议》</text></navigator>
+  </view>
+  <navigator class="jxlb"url='../order_jx/order_jx' hover-class='none'><text>捐鞋列表</text></navigator>
+</view>
