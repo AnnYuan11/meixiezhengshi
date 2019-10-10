@@ -15,9 +15,9 @@
 <navigator url='/pages/details/wyxx_smqx/wyxx_smqx?type2=1&num=3' style='border-bottom:1px solid #86cab0;margin-bottom:10rpx'>
   <image src='../../../image/details/tcxx/4.png' style='width:100%'mode="widthFix"></image>
 </navigator>
-<navigator url='/pages/details/wyxx_smqx/wyxx_smqx?type2=1&num=4' style='border-bottom:1px solid #86cab0;margin-bottom:10rpx'>
+<!-- <navigator url='/pages/details/wyxx_smqx/wyxx_smqx?type2=1&num=4' style='border-bottom:1px solid #86cab0;margin-bottom:10rpx'>
    <image src='../../../image/details/tcxx/1.png' style='width:100%'mode="widthFix"></image>
-</navigator>
+</navigator> -->
  <navigator url='/pages/details/wyxx_smqx/wyxx_smqx?type2=1&num=5' style='border-bottom:1px solid #86cab0;margin-bottom:10rpx'>
     <image src='../../../image/details/tcxx/3.png' style='width:100%'mode="widthFix"></image>
 </navigator>
